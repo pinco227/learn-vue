@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <title>Forms and user inputs manipulation with Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div id="app" class="container-fluid">
+        <div class="row justify-content-center text-center mt-3">
+            <div class="col-5">
+                <p>Write a message!</p>
+                <textarea class="form-control" placeholder="Write something!" cols="60" rows="5"
+                    v-model="text"></textarea>
+            </div>
+            <div class="col-5">
+                <p>Message</p>
+                <p>{{ text }}</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-5">
+                <input type="checkbox" id="checkbox" v-model="checked">
+                <label for="checkbox"> &nbsp;Value: {{ checked }}</label>
+            </div>
+            <div class="col-5">
+                <select v-model="city">
+                    <option>Rome</option>
+                    <option>Venice</option>
+                    <option>Paris</option>
+                    <option>London</option>
+                    <option>Dublin</option>
+                </select>
+                <span>&nbsp;&nbsp;City: {{ city }}</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="forms_and_user_input.js"></script>
+</body>
+
+</html>
